@@ -5,13 +5,14 @@ Solution must have O(N) time complexity.
 */
 
 function sameFrequency(int1, int2){
-    if (int1.toString().length !== int2.toString().length) {
+    let stringInt1 = int1.toString()
+    let stringInt2 = int2.toString()
+    if (stringInt1.length !== stringInt2.length) {
         return false
     }
     // initialize empty counter object
     let counter = {}
     // turn int1 into string or array
-    const stringInt1 = int1.toString()
     // loop over str1
     for (let i = 0; i < stringInt1.length; i++) {
         // if obj[str1[i]] exists
@@ -22,9 +23,8 @@ function sameFrequency(int1, int2){
             // obj[str1][i] = 1
             counter[stringInt1[i]] = 1
         }
+        
     }
-
-    const stringInt2 = int2.toString()
     // loop over str2
     for (let i = 0; i < stringInt2.length; i++) {
         // if obj[str2[i]] exists
