@@ -57,3 +57,9 @@ function areThereDuplicates(...args) {
 }
 
 // console.log(areThereDuplicates(1, 2, 3, 4))
+
+// ONE LINER SOLUTION
+
+function areThereDuplicates() {
+    return new Set(arguments).size !== arguments.length;
+  }
