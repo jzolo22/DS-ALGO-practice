@@ -25,6 +25,7 @@ function averagePair(arr, avg) {
     let p2 = arr.length - 1
 
     // loop through array until arr.length /2
+    // BETTER: while (p1 < p2)
     while (p1 < arr.length/2) {
         // if (arr[p1] + arr[p2])/2 === avg 
         if ((arr[p1] + arr[p2]) / 2 === avg) {
