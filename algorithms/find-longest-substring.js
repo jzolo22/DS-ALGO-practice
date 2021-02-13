@@ -15,33 +15,27 @@ Edge cases:
 
 function findLongestSubstring(str) {
     if (!str.length) return 0
-    // initialize a length 0
-    let length = 0
-    // initialize empty substr = ''
-    let substr = ''
-    // start = 0
-    let start = 0
-    // end = 0
-    let end = 0
+
+    let length = 3
+    let set = new Set() // t, h, i, 
+    let start = 0 //
+    let end = 0 // 3
 
     // while start < str.length 
-    while (start < str.length){
-        // if substr.includes str[end]? && end < str.length
-        if (substr.includes(str[end]) && end < str.length) {
+    while (end < str.length){
+        if (set.has(str[end])) {
             // maxlength = Math.max(str.length, maxlength)
-            length = Math.max(substr.length, length)
-            substr = ''
-            start = end
-            end++
-        } else if (!substr.includes(str[end])){
-            substr += str[end]
-            end++
+            set.delete(str[start])
+            start++
         } else {
-            break
-        }
+            set.add(str[end])
+            end++
+        } 
+        length = Math.max(set.size, length)
     }
         
     return length
 }
+
 
 console.log(findLongestSubstring('thisisawesome'))
