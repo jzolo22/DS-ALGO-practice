@@ -16,7 +16,7 @@ Edge cases:
 function findLongestSubstring(str) {
     if (!str.length) return 0
 
-    let length = 3
+    let length = 0
     let set = new Set() // t, h, i, 
     let start = 0 //
     let end = 0 // 3
@@ -32,10 +32,11 @@ function findLongestSubstring(str) {
             end++
         } 
         length = Math.max(set.size, length)
+        console.log(set, length)
     }
         
     return length
 }
 
 
-console.log(findLongestSubstring('thisisawesome'))
+console.log(findLongestSubstring('bbbbb'))
