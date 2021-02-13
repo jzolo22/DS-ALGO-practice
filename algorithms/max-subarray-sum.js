@@ -36,7 +36,7 @@ function maxSubarraySum(arr, num) {
     // set maxsum = tempsum
     maxSum = tempSum
 
-    // set up another loop 
+    // set up another loop
     for (let j = num; j < arr.length; j++) {
         // subtract the first part of the window
         // add the last part of the window
