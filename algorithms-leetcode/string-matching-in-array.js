@@ -11,4 +11,36 @@ Explanation: "as" is substring of "mass" and "hero" is substring of "superhero".
 
 */
 
-function stringMatching
+function stringMatching(words) {
+    // initialize new array = []
+    let substringArray = []
+
+    // initialize two pointers
+    let i = 0
+    let j = 1
+
+    while (j < words.length -1) {
+        if (words[i].includes(words[j])){
+            substringArray.push(words[j])
+        } else if (words[j].includes(words[i])) {
+            substringArray.push(words[i])
+        } 
+            j++
+    }
+
+    while (i < j){
+        if (words[i].includes(words[j])){
+            substringArray.push(words[j])
+        } else if (words[j].includes(words[i])) {
+            substringArray.push(words[i])
+        } 
+        i++
+    }
+ 
+
+    return substringArray
+}
+
+console.log(stringMatching(["mass","as","hero","superhero"]))
+console.log(stringMatching(["leetcode","et","code"]))
+console.log(stringMatching(["blue","green","bu"]))
