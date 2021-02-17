@@ -14,6 +14,6 @@ Output: "1[.]1[.]1[.]1"
 */
 
 var defangIPaddr = function(address) {
-    let regEx = /\./g
+    let regEx = /\./g // g means global
     return address.replace(regEx, "[.]")
 };
