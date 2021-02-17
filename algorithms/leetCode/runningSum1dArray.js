@@ -11,13 +11,30 @@ Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].
 
 */
 
-var runningSum = function(nums) {
-    let currentSum = 0
-    let runningSumArray = []
+// var runningSum = function(nums) {
+//     let currentSum = 0
+//     let runningSumArray = []
     
-    for (let i = 0; i < nums.length; i++){
-        currentSum += nums[i]
-        runningSumArray.push(currentSum)
-    }
-    return runningSumArray
-};
+//     for (let i = 0; i < nums.length; i++){
+//         currentSum += nums[i]
+//         runningSumArray.push(currentSum)
+//     }
+//     return runningSumArray
+// };
+
+
+// using reduce:
+const runningSum = function(nums) {
+            // accumulator, currentValue, [, index[, array]] )[, initialValue]
+    nums.reduce((accumulator, currentValue, currentIndex, array) => {
+        console.log("accumulator: ", accumulator)
+        console.log("current value: ", currentValue)
+        return accumulator + currentValue
+        // array[currentIndex] = accumulator
+        // console.log(accumulator, currentValue, currentIndex, array)
+        // console.log("array: ", array) 
+
+    }, 0)
+}
+
+console.log(runningSum([1,2,3,4]))
