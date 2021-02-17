@@ -32,11 +32,10 @@ function findLongestSubstring(str) {
             end++
         } 
         length = Math.max(set.size, length)
-        console.log(set, length)
+        // console.log(set, length)
     }
         
     return length
 }
-
 
 console.log(findLongestSubstring('bbbbb'))
