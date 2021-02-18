@@ -27,14 +27,10 @@ Explanation: Running sum is obtained as follows: [1, 1+2, 1+2+3, 1+2+3+4].
 const runningSum = function(nums) {
             // accumulator, currentValue, [, index[, array]] )[, initialValue]
     nums.reduce((accumulator, currentValue, currentIndex, array) => {
-        console.log("accumulator: ", accumulator)
-        console.log("current value: ", currentValue)
-        return accumulator + currentValue
-        // array[currentIndex] = accumulator
-        // console.log(accumulator, currentValue, currentIndex, array)
-        // console.log("array: ", array) 
-
-    }, 0)
+        console.log(accumulator, array, currentIndex)
+        return array[currentIndex] += accumulator
+    })
+    return nums
 }
 
 console.log(runningSum([1,2,3,4]))
