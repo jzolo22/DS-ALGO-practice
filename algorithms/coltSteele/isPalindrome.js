@@ -10,14 +10,20 @@ Write a recursive function called isPalindrome which returns true if the string 
 // slice off last letter each time and add to new string
 
 function isPalindrome(str) {
-    if (!str.length) {
-        return str === newString ? true : false
-    }
+    
     let newString = ''
-    newString += str.slice(-1)
-    return newString += isPalindrome(str.slice(0, -1))
+
+    function helper(str) {
+        if (!str.length) return ''
+        newString += str.slice(-1)
+        helper (str.slice(0, -1))
+    }
+
+    helper(str)
+
+    return str === newString ? true : false
 }
 
 // compare 
 
-console.log(isPalindrome("abad"))
+console.log(isPalindrome("abba"))
