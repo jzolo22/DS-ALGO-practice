@@ -33,7 +33,7 @@ function collectStrings(obj) {
         if (typeof obj[key] === "string"){
             stringArray.push(obj[key])
         } else {
-            stringArray.concat(collectStrings(obj[key]))
+            stringArray = stringArray.concat(collectStrings(obj[key]))
         }
     }
 
@@ -41,3 +41,9 @@ function collectStrings(obj) {
 }
 
 console.log(collectStrings(obj))
+
+
+
+
+
+while (some case is true )

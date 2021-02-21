@@ -11,3 +11,11 @@ function productOfArray(nums){
 }
 
 console.log(productOfArray([1,2,3]))
+
+
+function sumOfArray(nums){
+    if (!nums.length) return 0
+    return nums[0] + sumOfArray(nums.slice(1))
+}
+
+console.log(sumOfArray([1,2,7]))
