@@ -16,24 +16,23 @@ If you never find the value, return -1
 function binarySearch(arr, val){
     let left = 0
     let right = arr.length - 1
-    let middle = Math.round((right+left)/2)
+    let middle = Math.floor((right+left)/2)
 
-    while (left < right){
+    while (left <= right){
         if (arr[middle] === val) {
             return middle
         } else if (arr[middle] > val) {
-            right = middle
-            middle = Math.round((right+left)/2)
+            right = middle - 1
+            middle = Math.floor((right+left)/2)
         } else if (arr[middle] < val) {
-            left = middle
-            middle = Math.round((right+left)/2)
+            left = middle + 1
+            middle = Math.floor((right+left)/2)
         }
     }
     return -1
 }
 
-console.log(binarySearch([1,2,3,4,8,12,29], 2))
+console.log(binarySearch([1,2,3,4,8,12,29], 2)) // 1
+console.log(binarySearch([1,2,3,4,8,12,29], 12)) // 5
+console.log(binarySearch([1,2,3,4,8,12,29], 14)) // -1
 
-// [1,2,3,4,8,12,29]
-//        l       r
-//        3       6
