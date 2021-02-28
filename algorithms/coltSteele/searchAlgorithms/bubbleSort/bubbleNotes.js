@@ -18,11 +18,12 @@ for (let i = arr.length - 1; i >= 0; i--){
     // inner loop with variable j at beginning until i -1
     for (let j = 0; j <= i - 1; j++){
         if (arr[j] > arr[j + 1]){
-
+            // if arr[j] > arr[j+1], swap those values
+            swap(arr, j, j+1)
         }
     }
 }
-// if arr[j] > arr[j+1], swap those values
+return arr
 // return sorted array
 }
 
@@ -30,9 +31,11 @@ for (let i = arr.length - 1; i >= 0; i--){
 // define a helper swap function to keep the code clean
 function swap(arr, index1, index2){
     let temp = arr[index2]
-    arr[index2] = index1
+    arr[index2] = arr[index1]
     arr[index1] = temp
 }
+
+console.log(bubbleSort([1, 5, 7, 3, 4]))
 
 
 // ES6 swap syntax
