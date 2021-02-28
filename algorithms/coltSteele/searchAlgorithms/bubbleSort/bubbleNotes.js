@@ -10,18 +10,22 @@ can help to define a function called swap
 
 */
 
-// [1, 5, 7, 3, 4]
+// [1, 3, 4, 5, 7]
 
 function bubbleSort(arr){
-// start looping with a variable called i at the end of the array towards the beginning
+// start looping with a variable called i at the end of the array towards the beginning, this way we're not looping through the elements that have already been sorted
+let noSwaps // will keep track of if there are any swaps in the pass - if not, break out of the loop
 for (let i = arr.length - 1; i >= 0; i--){
-    // inner loop with variable j at beginning until i -1
+    noSwaps = true
+    // inner loop with variable j at beginning until i - 1
     for (let j = 0; j <= i - 1; j++){
         if (arr[j] > arr[j + 1]){
             // if arr[j] > arr[j+1], swap those values
             swap(arr, j, j+1)
+            noSwaps = false
         }
     }
+    if (noSwaps) break
 }
 return arr
 // return sorted array
