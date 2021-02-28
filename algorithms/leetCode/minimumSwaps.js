@@ -57,3 +57,6 @@ function minimumSwap(str1, str2){
 
 // console.log(minimumSwap("xx", "xy")) // -1
 console.log(minimumSwap("xy", "yx")) // 2
+
+// making some changes
+// changing some stuff to see whats up

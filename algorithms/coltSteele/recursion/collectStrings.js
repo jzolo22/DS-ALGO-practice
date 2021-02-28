@@ -46,4 +46,3 @@ console.log(collectStrings(obj))
 
 
 
-while (some case is true )
