@@ -31,5 +31,36 @@ What if elements of nums2 are stored on disk, and the memory is limited such tha
 // if they don't, move on for both loops
 
 function intersect(nums1, nums2){
-    
+    let intersect = []
+    for (let i = 0; i < nums1.length; i++){
+        console.log("outer loop: ", nums1[i])
+        for (let j = 0; j < nums2.length; j++){
+            console.log("inner loop: ", nums2[i+j])
+            if (nums1[i] !== nums2[i+j]){
+                break
+            }
+            intersect.push(nums2[i+j])
+        }
+    }
+    return intersect
 }
+
+console.log(intersect([1,2,2,1], [2,2]))
+
+
+
+// function stringSearch(strMain, str) {
+//     let count = 0
+   
+//     for (let i = 0; i < strMain.length; i++){
+//         for (let j = 0; j < str.length; j++){
+//             if (str[j] !== strMain[i+j]){
+//                 // j === str.length - 1 ? count++ : null
+//                 break
+//             } 
+//             j === str.length - 1 ? count++ : null
+//         }
+//     }
+
+//     return count
+// }
