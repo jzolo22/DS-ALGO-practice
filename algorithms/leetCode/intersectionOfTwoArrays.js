@@ -22,3 +22,14 @@ What if nums1's size is small compared to nums2's size? Which algorithm is bette
 What if elements of nums2 are stored on disk, and the memory is limited such that you cannot load all elements into the memory at once?
 
 */
+
+// create new array = []
+// determine which array is longer
+// whichever is longer, loop over, comparing to 2nd array
+// nested loop to compare
+// if numbers match, push to array
+// if they don't, move on for both loops
+
+function intersect(nums1, nums2){
+    
+}
