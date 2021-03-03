@@ -13,17 +13,15 @@ It loops through the whole array, identifies minimum in the array, then swaps it
 // repeat this with the next element until the array is sorted
 
 function selectionSort(nums){
-    let index = 0
     for (let i = 0; i < nums.length; i++){
-        small = nums[i]
+        small = i
         for (let j = i + 1; j < nums.length; j++){
-            if (nums[j] < small){
-                small = nums[j]
-                index = j
+            if (nums[j] < nums[small]){
+                small = j
             }
         }
-        if (small < nums[i]){
-            swap(nums, i, index)
+        if (nums[small] < nums[i]){
+            swap(nums, i, small)
         }
     }
     return nums
