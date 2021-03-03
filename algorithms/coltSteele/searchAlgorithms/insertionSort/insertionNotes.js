@@ -11,11 +11,11 @@ Builds up a sorted portion of an array by placing each item in the right spot of
 
 function insertionSort(nums){
     for (let i = 1; i < nums.length; i++){
+        console.log("OUTSIDE I: ", i)
         let current = nums[i]
         let j
-        for (j = i - 1 ; j >= 0 && nums[j] > current; j--){
+        for (j = i-1; j >= 0 && nums[j] > current; j--){
             nums[j+1] = nums[j]
-            console.log(nums)
         }
         nums[j+1] = current
     }
@@ -23,3 +23,6 @@ function insertionSort(nums){
 }
 
 console.log(insertionSort([77, 2, 3, 0]))
+
+// [2, 3, 77, 77]
+//         j  i
