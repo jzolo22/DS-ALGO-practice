@@ -10,7 +10,6 @@ can help to define a function called swap
 
 BIG O --> worst case is n squared
     if array is almost sorted, it's more like n time complexity if you include the noSwaps breakout
-
 */
 
 // [1, 3, 4, 5, 7]
