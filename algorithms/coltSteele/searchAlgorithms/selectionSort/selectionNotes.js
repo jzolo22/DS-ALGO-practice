@@ -4,6 +4,10 @@ A search algorithm similar to bubble sort, but instead of placing large values a
 
 It loops through the whole array, identifies minimum in the array, then swaps it with the first unsorted element.
 
+Time complexity --> O(n^2)
+
+If you want to minimize the number of swaps for some reason, selection would be better because it's only swapping at the end of each loop
+
 */
 
 // store the first element as the smallest value we've seen
