@@ -10,6 +10,11 @@ can help to define a function called swap
 
 BIG O --> worst case is n squared
     if array is almost sorted, it's more like n time complexity if you include the noSwaps breakout
+
+Performs well with nearly sorted data (O(n))
+Worst case: O(n^2)
+Space complexity: O(1)
+ 
 */
 
 // [1, 3, 4, 5, 7]
@@ -41,10 +46,5 @@ function swap(arr, index1, index2){
     arr[index1] = temp
 }
 
-console.log(bubbleSort([1, 5, 7, 3, 4]))
+console.log(bubbleSort([1, 5, 7, 3, 4])) 
 
-
-// ES6 swap syntax
-// const swap = (arr, index1, index2) => {
-//     [arr[index1], arr[index2]] = [arr[index2], arr[index1]]
-// }

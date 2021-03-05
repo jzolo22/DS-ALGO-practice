@@ -4,7 +4,8 @@ A search algorithm similar to bubble sort, but instead of placing large values a
 
 It loops through the whole array, identifies minimum in the array, then swaps it with the first unsorted element.
 
-Time complexity --> O(n^2)
+Time complexity --> O(n^2) even in best case scenario
+Space complexity: O(1)
 
 If you want to minimize the number of swaps for some reason, selection would be better because it's only swapping at the end of each loop
 
@@ -36,4 +37,5 @@ const swap = (arr, index1, index2) => {
     [arr[index1], arr[index2]] = [arr[index2], arr[index1]]
 }
 
-console.log(selectionSort([6, 77, 3, 5, 8, 2, 1]))
+console.log(selectionSort([6, 77, 3, 5, 12, 2, 1]))
+
