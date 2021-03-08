@@ -35,9 +35,9 @@ function smallestDivisor(nums, threshold){
                     return divisor
                 }
         }
-    return divisor
+    // return divisor
 }
 
 
 console.log(smallestDivisor([44,22,33,11,1], 5)) // 44
-console.log(smallestDivisor([1,2,5,9], 6)) // 44
+console.log(smallestDivisor([1,2,5,9], 6)) // 5
