@@ -15,7 +15,7 @@
             if (arr1[point1] <= arr2[point2]){
                 mergedArray.push(arr1[point1])
                 point1++
-            } else (arr2[point2] < arr1[point1]){
+            } else {
                 mergedArray.push(arr2[point2])
                 point2++
             }
