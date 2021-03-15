@@ -24,6 +24,29 @@
 // Grab the pivot from the start of the array
 // Store the current pivot index in a variable (this will keep track of where the pivot should end up)
 // Loop through the array from start to end
-    // if the pivot is greater than the current element, incrememnt the pivot index variable and then swap the current element with the element at the pivot index
+    // if the  current element is less than the pivot, incrememnt the pivot index variable and then swap the current element with the element at the pivot index
 // Swap the starting element (i.e. the pivot) with the pivot index 
 // Return the pivot index
+
+function pivot(arr){
+    // start = 0
+    // end = array.length-1
+    let pivotIndex = 0
+
+    for (let i = 1; i <= arr.length; i++){
+        if (arr[i] < arr[0]){
+            pivotIndex++
+            swap(arr, i, pivotIndex)
+            // console.log(pivotIndex)
+        }
+    }
+    swap(arr, 0, pivotIndex)
+    // console.log(arr)
+    return pivotIndex
+}
+
+function swap(arr, index1, index2){
+    [arr[index1], arr[index2]] = [arr[index2], arr[index1]]
+}
+
+console.log(pivot([8,3,2,7,9,1,0]))
