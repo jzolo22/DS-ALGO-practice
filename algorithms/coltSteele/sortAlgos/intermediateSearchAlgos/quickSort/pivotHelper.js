@@ -33,7 +33,7 @@ function pivot(arr){
     // end = array.length-1
     let pivotIndex = 0
 
-    for (let i = 1; i <= arr.length; i++){
+    for (let i = 1; i < arr.length; i++){
         if (arr[i] < arr[0]){
             pivotIndex++
             swap(arr, i, pivotIndex)
@@ -49,4 +49,22 @@ function swap(arr, index1, index2){
     [arr[index1], arr[index2]] = [arr[index2], arr[index1]]
 }
 
-console.log(pivot([8,3,2,7,9,1,0]))
+console.log(pivotCS([8,3,2,7,9,1,0]))
+
+
+// ---------------- Colt Steele Solution ---------------- //
+
+function pivotCS(arr, start=0, end=arr.length-1){
+    let pivot = arr[start]
+    let swapIndex = start
+
+    for (let i = 1; i < arr.length; i++){
+        if (pivot > arr[i]){
+            swapIndex++
+            swap(arr, swapIndex, i)
+        }
+    }
+    swap(arr, start, swapIndex)
+    return swapIndex
+}
+
