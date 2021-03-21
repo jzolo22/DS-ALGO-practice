@@ -36,3 +36,22 @@ console.log(binarySearch([1,2,3,4,8,12,29], 2)) // 1
 console.log(binarySearch([1,2,3,4,8,12,29], 12)) // 5
 console.log(binarySearch([1,2,3,4,8,12,29], 14)) // -1
 
+// function binarySearch(nums, val){
+//     let left = 0
+//     let right = nums.length-1
+//     let middle = Math.floor(right / 2)
+
+//     while (left < right){
+//         if (nums[middle] === val){
+//             return middle
+//         } else if (nums[middle] > val){
+//             right = middle - 1
+//             middle = Math.floor((right + left) / 2)
+//         } else if (nums[middle] < val){
+//             left = middle + 1
+//             middle = Math.floor((right + left) / 2)
+//         }
+//     }
+//     return -1
+// }
+
