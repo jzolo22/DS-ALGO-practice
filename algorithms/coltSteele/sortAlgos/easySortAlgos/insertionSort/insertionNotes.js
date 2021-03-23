@@ -18,7 +18,7 @@ Space complexity: O(1)
 
 function insertionSort(nums){
     for (let i = 1; i < nums.length; i++){
-        console.log("OUTSIDE I: ", i)
+        // console.log("OUTSIDE I: ", i)
         let current = nums[i]
         let j
         for (j = i-1; j >= 0 && nums[j] > current; j--){
