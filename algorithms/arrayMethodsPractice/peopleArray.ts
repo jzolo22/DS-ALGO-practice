@@ -29,3 +29,11 @@ console.log(withBob)
 //     }
 // }
 console.log(people)
+
+let myString: string = 'Ryu+Ken+Chun-Li+Cammy+Guile+Sakura+Sagat+Juri';
+const myArray: string[] = myString.split('+')
+myArray.forEach((name:string, index:number) => {
+    myArray[index] = name + ` (${index})`
+})
+console.log(myArray.join(' - '))
+console.log(myArray)
