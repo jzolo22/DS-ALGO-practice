@@ -37,3 +37,4 @@ myArray.forEach((name:string, index:number) => {
 })
 console.log(myArray.join(' - '))
 console.log(myArray)
+
