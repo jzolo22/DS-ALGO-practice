@@ -19,9 +19,9 @@ console.log(index)
 const indexTwo: number = people.findIndex(name => name === "Foo")
 console.log(indexTwo)
 people = ["Greg", "Mary", "Devon", "James"]
-people.splice(2, 1, "Elizabeth", "Artie")
-const withBob: string[] = people.concat("Bob")
-console.log(withBob)
+people.splice(2)
+// const withBob: string[] = people.concat("Bob")
+console.log(people)
 // for (let i: number = 0; i < people.length; i++){
 //     if (people[i] === "Mary"){
 //         console.log("Mary")
