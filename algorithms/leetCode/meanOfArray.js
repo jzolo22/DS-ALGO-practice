@@ -19,9 +19,19 @@ Output: 4.00000
 // find out how many elements 5% is 
 // sort the array
 // remove the first 5%, then the last 5%
+// calculate the mean
 
 function meanOfArray(arr){
-    let percent = Math.floor(arr.length * 100 / 5)
+    let numToRemove = Math.floor(arr.length / 100 * 5)
     arr.sort((a, b) => a - b)
-    
+
+    for (let i = 0; i < numToRemove; i++){
+        arr.shift()
+        arr.pop()
+    }
+
+    const sum = arr.reduce((sum, num) => sum + num)
+    return sum / arr.length
 }
+
+console.log(meanOfArray([1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3]))
