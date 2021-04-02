@@ -27,15 +27,17 @@ function findLongestSubstring(str) {
             // maxlength = Math.max(str.length, maxlength)
             set.delete(str[start])
             start++
+            console.log(start)
         } else {
             set.add(str[end])
             end++
+            console.log(end)
         } 
         length = Math.max(set.size, length)
-        // console.log(set, length)
+        console.log(set, length)
     }
         
     return length
 }
 
-console.log(findLongestSubstring('bbbbb'))
+console.log(findLongestSubstring('bratbbb'))
