@@ -15,3 +15,12 @@ Output: 3
 Explanation: Alice can only eat 6 / 2 = 3 candies. Since there are only 3 types, she can eat one of each type.
 
 */
+
+function distributeCandies(candyType){
+    let numCandies = candyType.length / 2
+    let unique = Array.from(new Set(candyType))
+    return Math.min(unique.length, numCandies)
+
+}
+
+console.log(distributeCandies([6,6,6,6]))
