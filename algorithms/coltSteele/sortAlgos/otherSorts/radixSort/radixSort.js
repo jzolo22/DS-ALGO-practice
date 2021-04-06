@@ -9,11 +9,11 @@
 
 */
 
-function radixSort(nums){
-    let loopLength = mostDigits(nums)
+function radixSortJZ(nums){
+    let maxDigitCount = mostDigits(nums)
     let i = 0
     sorted = []
-    while (i < loopLength){
+    while (i < maxDigitCount){
         let zeros = []
         let ones = []
         let twos = []
@@ -24,6 +24,8 @@ function radixSort(nums){
         let sevens = []
         let eights = []
         let nines = []
+        // Array.from({length: 10}, () => []) 
+            // would create an array of 10 empty sub arrays 
 
         nums.forEach(num => {
             switch(getDigit(num, i)){
@@ -65,8 +67,23 @@ function radixSort(nums){
     return sorted
 }
 
-console.log(radixSort([1234, 23, 900008, 78]))
+console.log(radixSortJZ([1234, 23, 900008, 78]))
 
+//--------------------------------------------//
+function radixSort(nums){
+    let maxDigitCount = mostDigits(nums)
+    for (let k = 0; k < maxDigitCount; k++){
+        let digitBuckets = Array.from({length: 10}, () => [])
+        for (let i = 0; i < nums.length; i++){
+            let digit = getDigit(nums[i], k)
+            digitBuckets[digit].push(nums[i])
+        }
+        nums = [].concat(...digitBuckets)
+    }
+    return nums
+}
+
+console.log(radixSort([1234, 56, 89, 90000089, 1]))
 // ------------------------------------------//
 function digitCount(num){
     return num.toString().length
